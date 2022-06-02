@@ -20,5 +20,5 @@ public:
     void setId(int id);
     void setLength(string length);
     void setGenre(string genre);
-    void print();
+    virtual void print();
 };

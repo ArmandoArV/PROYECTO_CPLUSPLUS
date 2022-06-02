@@ -24,4 +24,5 @@ public:
     void setLength(string length);
     void setGenre(string genre);
     void setRating(int rating);
+    void print();
 };

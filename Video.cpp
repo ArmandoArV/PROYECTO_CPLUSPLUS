@@ -7,17 +7,13 @@ Video::Video(int id, string length, string genre)
     this->length = length;
     this->genre = genre;
 }
-
+Video::Video()
+{
+    //ctor
+}
 Video::~Video()
 {
     //dtor
-}
-
-Video::Video(const Video& other)
-{
-    this->id = other.id;
-    this->length = other.length;
-    this->genre = other.genre;
 }
 
 int Video::getId()
@@ -55,4 +51,11 @@ void Video::setLength(string length)
 void Video::setGenre(string genre)
 {
     this->genre = genre;
+}
+
+void Video::print()
+{
+    cout << "Id: " << this->id << endl;
+    cout << "Length: " << this->length << endl;
+    cout << "Genre: " << this->genre << endl;
 }

@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.rmd": "markdown",
         "*.tcc": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
@@ -19,6 +20,8 @@
         "ostream": "cpp",
         "streambuf": "cpp",
         "type_traits": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "sstream": "cpp",
+        "fstream": "cpp"
     }
 }

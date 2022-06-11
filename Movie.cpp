@@ -3,8 +3,9 @@
 #include "Movie.h"
 using namespace std;
 
-Movie::Movie(int id, string length, string genre, int rating)
+Movie::Movie(int id, string name ,string length, string genre, int rating)
 {
+    this -> name = name;
     this->id = id;
     this->length = length;
     this->genre = genre;
@@ -25,6 +26,11 @@ int Movie::getRating()
     return this->rating;
 }
 
+string Movie::getName()
+{
+    return this->name;
+}
+
 string Movie::getLength()
 {
     return this->length;
@@ -41,6 +47,11 @@ void Movie::setId(int id)
     this->id = id;
 }   
 
+void Movie::setName(string name)
+{
+    this->name = name;
+}
+
 void Movie::setLength(string length)
 {
     this->length = length;
@@ -53,7 +64,8 @@ void Movie::setRating(int rating)
 {
     this->rating = rating;
 }   
+
 void Movie::print()
 {
-    cout << "Movie: " << this->id << " " << this->length << " " << this->genre << " " << this->rating << endl;
-}       
+    cout << "Movie: " << this->name << "\n" <<" Id: " << this->id<< "\n" << " Length " << this->length << "\n" << " Genre: " << this->genre << "\n" << " Rating: " << this->rating << "\n";
+}

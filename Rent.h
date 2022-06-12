@@ -21,6 +21,7 @@ class Rent: public Video
     string getName();
     string getLength();
     string getGenre();
+    int getPrice();
     //Setters
     void setId(int id);
     void setPrice(int price);

@@ -6,6 +6,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <string>
 using namespace std;
 
 
@@ -60,6 +61,7 @@ do{
     cin >> option;
     cout << "\n";
     if(option == 1){
+        system("CLS");
         cout << "\nThese are all the movies and series which are available on the platform: \n" << endl;
         ifstream myFile;    
         myFile.open("DB.txt");
@@ -149,7 +151,39 @@ do{
         }
     }
     else if(option == 6){
-        
+        // system will request the user how many movies he wants to rent and will be shown on the screen and will be stored in the rent array and will display the total price of the rent
+        int numberOfMovies;
+        cout << "Please enter the number of movies you want to rent: ";
+        cin >> numberOfMovies;
+        cout << "\n";
+        int totalPrice = 0;
+        for(int i=0; i<numberOfMovies; i++){
+            int movieOption;
+            cout << "Please choose a movie to rent: ";
+            cin >> movieOption;
+            cout << "\n";
+            if(movieOption==1){
+                totalPrice += rents[0]->getPrice();
+                cout << "You have rented " << rents[0]->getName() << " for $ " << rents[0]->getPrice() << "\n";
+            }else if(movieOption==2){
+                totalPrice += rents[1]->getPrice();
+                cout << "You have rented " << rents[1]->getName() << " for $ " << rents[1]->getPrice() << "\n";
+            }else if(movieOption==3){
+                totalPrice += rents[2]->getPrice();
+                cout << "You have rented " << rents[2]->getName() << " for $ " << rents[2]->getPrice() << "\n";
+            }else if(movieOption==4){
+                totalPrice += rents[3]->getPrice();
+                cout << "You have rented " << rents[3]->getName() << " for $ " << rents[3]->getPrice() << "\n";
+            }else if(movieOption==5){
+                totalPrice += rents[4]->getPrice();
+                cout << "You have rented " << rents[4]->getName() << " for $ " << rents[4]->getPrice() << "\n";
+            }else{
+                cout << "Invalid option" << endl;
+                return 0;
+            }
+            // here will display the total price of the rent for all the movies the user has rented
+            cout << "Total price: $ " << totalPrice << "\n";
+        }
     }
 }
 while(option !=0);

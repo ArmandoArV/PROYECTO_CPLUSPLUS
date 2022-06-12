@@ -16,6 +16,7 @@ public:
     ~Video();
     int getId();
     int getRating();
+    int getPrice();
     //Getters
     string getName();
     string getLength();
@@ -28,5 +29,6 @@ public:
     void setLength(string length);
     void setGenre(string genre);
     void setRating(int rating);
+    void setPrice(int price);
     virtual void print();
 };

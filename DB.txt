@@ -5,10 +5,18 @@
 [4] Interestellar
 [5] Minions
                         Series
-[6] Game Of Thrones
-[7] The BigBang Theory 
-[8] Breaking Bad
-[9] The Walking Dead
-[10] The Simpsons  
+[1] Game Of Thrones
+[2] The BigBang Theory 
+[3] Breaking Bad
+[4] The Walking Dead
+[5] The Simpsons  
+
+                        Rental
+
+[1] Joker
+[2] Mad Max
+[3] Coco
+[4] The Exorcist
+[5] The Lion King
 
 

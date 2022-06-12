@@ -36,19 +36,17 @@ string Video::getGenre()
 string Video::getName()
 {
     return this->name;
+    cout << name;
+}
+
+int Video::getPrice()
+{
+    return this->price;
 }
 
 int Video::getRating()
 {
     return this->rating;
-}
-void Video::setVideo(Video* video)
-{
-    this->id = video->getId();
-    this->length = video->getLength();
-    this->genre = video->getGenre();
-    this->name = video->getName();
-    this->rating = video->getRating();
 }
 
 void Video::setId(int id)

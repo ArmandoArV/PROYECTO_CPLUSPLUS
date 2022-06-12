@@ -39,6 +39,10 @@ string Rent::getLength()
     return this->length;
 }   
 
+int Rent::getPrice()
+{
+    return this->price;
+}
 string Rent::getGenre()
 {
     return this->genre;

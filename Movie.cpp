@@ -65,6 +65,8 @@ void Movie::setRating(int rating)
     this->rating = rating;
 }   
 
+
+
 void Movie::print()
 {
     cout << "Movie: " << this->name << "\n" <<" Id: " << this->id<< "\n" << " Length " << this->length << "\n" << " Genre: " << this->genre << "\n" << " Rating: " << this->rating << "\n";

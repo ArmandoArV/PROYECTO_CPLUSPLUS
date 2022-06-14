@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 using namespace std;
-class Video
+class Video // 
 {
 private:
     string name;
@@ -30,5 +30,5 @@ public:
     void setGenre(string genre);
     void setRating(int rating);
     void setPrice(int price);
-    virtual void print();
+    virtual void print(); // prints the information of the video (overrided in the derived classes) (virtual function) (pure virtual function)
 };

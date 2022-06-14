@@ -1,3 +1,9 @@
+/*
+    Name: Armando Arredondo Valle
+    Date: 12/06/2022
+    Matricula: A01424709
+*/
+// Here we include the libraries we need
 #include "Video.h"
 #include "Movie.h"
 #include "Serie.h"
@@ -9,15 +15,14 @@
 #include <string>
 using namespace std;
 
-
 int main(){
-int option=5;
-   // Movies objects
-    vector <Video*> movies(5);
+int option=0;
+   // Vector to store movies, series and rents
+    vector <Video*> movies(5); // 5 movies
     vector <Video*> series(5);
     vector <Video*> rents(5);
-    
-    movies[0] = new Movie(1, "The Matrix", "2h", "Sci-Fi", 3);
+    // Movie objects
+    movies[0] = new Movie(1, "The Matrix", "2h", "Sci-Fi", 3); // Movie object 1
     movies[1] = new Movie(2, "Inception", "2h", "Action", 4);
     movies[2] = new Movie(3, "The Dark Knight", "2h", "Action", 5);
     movies[3] = new Movie(4, "Interestellar", "2h", "Sci-Fi", 2);
@@ -57,135 +62,135 @@ do{
     cout << "   [0] Exit" << "\n";
     //Operations
     cout << "\n";
-    cout << "Please enter an option: "; 
-    cin >> option;
-    cout << "\n";
-    if(option == 1){
-        system("CLS");
-        cout << "\nThese are all the movies and series which are available on the platform: \n" << endl;
-        ifstream myFile;    
-        myFile.open("DB.txt");
-        string str;
-        if(myFile) {
+    cout << "Please enter an option: ";  // Ask the user to enter an option
+    cin >> option; // Get the option from the user
+    cout << "\n"; // Print a new line
+    if(option == 1){ // If the option is 1
+        system("CLS"); // Clear the screen
+        cout << "\nThese are all the movies and series which are available on the platform: \n" << endl; // Print a message
+        ifstream myFile;    // Create a file stream object
+        myFile.open("DB.txt"); // Open the file
+        string str; // Create a string variable
+        if(myFile) { // If the file is open
+            ostringstream ss; // Create a string stream object
+            ss << myFile.rdbuf(); // reading data
+            str = ss.str(); // Get the string from the string stream object
+        }
+        cout<<str; // Print the string
+        myFile.close(); // Close the file
+    } // 
+    else if(option == 2){ // If the option is 2
+        ifstream myFile;    // Create a file stream object
+        myFile.open("DB.txt"); // Open the file
+        string str; // Create a string variable
+        if(myFile) { // If the file is open
             ostringstream ss;
             ss << myFile.rdbuf(); // reading data
             str = ss.str();
         }
         cout<<str;
         myFile.close();
-    }
-    else if(option == 2){
-        ifstream myFile;    
-        myFile.open("DB.txt");
-        string str;
-        if(myFile) {
-            ostringstream ss;
-            ss << myFile.rdbuf(); // reading data
-            str = ss.str();
-        }
-        cout<<str;
-        myFile.close();
-        int movieOption;
-        cout << "Please choose a movie to watch: ";
-        cin >> movieOption;
+        int movieOption; // Create an integer variable
+        cout << "Please choose a movie to watch: "; // Ask the user to choose a movie
+        cin >> movieOption; // Get the movie from the user
         cout << "\n";
-        if(movieOption==1){
-            movies[0]->print();
-        }else if(movieOption==2){
-            movies[1]->print();
-        }else if(movieOption==3){
-            movies[2]->print();
-        }else if(movieOption==4){
-            movies[3]->print();
-        }else if(movieOption==5){
-            movies[4]->print();
-        }else{
-            cout << "Invalid option" << endl;
-            return 0;
-        }
-    }
-    else if(option == 3){
-        int serieOption;
-        cout << "Please choose a serie to watch: ";
-        cin >> serieOption;
-        cout << "\n";
-        if(serieOption==1001){
-            series[0]->print();
-        }else if(serieOption==1002){
-            series[1]->print();
-        }else if(serieOption==1003){
-            series[2]->print();
-        }else if(serieOption==1004){
-            series[3]->print();
-        }else if(serieOption==1005){
-            series[4]->print();
-        }else{
-            cout << "Invalid option" << endl;
-            return 0;
-        }
-    }
-    else if(option == 4){
-        int rating;
-        cout << "Please enter a rating: ";
-        cin >> rating;
-        cout << "\n";
+        if(movieOption==1){ // If the movie is 1
+            movies[0]->print(); // Print the movie "The Matrix"
+        }else if(movieOption==2){ // If the movie is 2
+            movies[1]->print(); // Print the movie "Inception"
+        }else if(movieOption==3){ // If the movie is 3
+            movies[2]->print(); // Print the movie "The Dark Knight"
+        }else if(movieOption==4){ // If the movie is 4
+            movies[3]->print(); // Print the movie "Interestellar"
+        }else if(movieOption==5){ // if the movie is 5 
+            movies[4]->print(); // Print the movie "Minions"
+        }else{ // If the movie is not 1, 2, 3, 4 or 5
+            cout << "Invalid option" << endl; // Print an error message
+            return 0;// Exit the program
+        }// End of if-else statement
+    } // 
+    else if(option == 3){ // If the option is 3
+        int serieOption; // Create an integer variable
+        cout << "Please choose a serie to watch: "; // Ask the user to choose a serie
+        cin >> serieOption; // Get the serie from the user
+        cout << "\n"; // Print a new line
+        if(serieOption==1001){ // If the serie is 1
+            series[0]->print(); // Print the serie "Game of Thrones"
+        }else if(serieOption==1002){ // If the serie is 2
+            series[1]->print(); // Print the serie "The Big Bang Theory"
+        }else if(serieOption==1003){ // If the serie is 3
+            series[2]->print(); // Print the serie "Breaking Bad"
+        }else if(serieOption==1004){ // If the serie is 4
+            series[3]->print(); // Print the serie "The Walking Dead"
+        }else if(serieOption==1005){ // If the serie is 5
+            series[4]->print(); // Print the serie "The Simpsons"
+        }else{ // If the serie is not 1, 2, 3, 4 or 5
+            cout << "Invalid option" << endl; // Print an error message
+            return 0; // Exit the program
+        } // End of if-else statement
+    } // 
+    else if(option == 4){ // If the option is 4
+        int rating; // Create an integer variable
+        cout << "Please enter a rating: "; // Ask the user to enter a rating
+        cin >> rating; // Get the rating from the user
+        cout << "\n"; // Print a new line
         // user will request movies with an specific rating and will be shown on the screen if they exist in the catalogue
-        for(int i=0; i<5; i++){
-            if(movies[i]->getRating()==rating){
+        for(int i=0; i<5; i++){ // For each movie in the catalogue
+            if(movies[i]->getRating()==rating){ // If the movie has the same rating as the user's input
                 // cout << "Movie: " << movies[i]->getName() << "Rating" << movies[i]->getRating() << endl;
                 // print all the movies with the specific rating
-                movies[i]->print();
-            }
-        }
-    }
-    else if(option == 5){
-        int rt;
-        cout << "Please enter a rating: ";
-        cin >> rt;
-        cout << "\n";
+                movies[i]->print(); // Print the movie
+            } // End of if statement
+        } // End of for loop
+    } //
+    else if(option == 5){ // If the option is 5
+        int rt; // Create an integer variable
+        cout << "Please enter a rating: "; // Ask the user to enter a rating
+        cin >> rt; // Get the rating from the user
+        cout << "\n"; // Print a new line
         // user will request series with an specific rating and will be shown on the screen if they exist in the catalogue
-        for(int i=0; i<5; i++){
-            if(series[i]->getRating()==rt){
-                cout << "Serie: " << series[i]->getName() << "Rating" << series[i]->getRating() << endl;
-            }
-        }
-    }
+        for(int i=0; i<5; i++){ // For each serie in the catalogue
+            if(series[i]->getRating()==rt){ // If the serie has the same rating as the user's input
+                cout << "Serie: " << series[i]->getName() << "Rating" << series[i]->getRating() << endl; // Print the serie
+            } // End of if statement
+        } // End of for loop
+    } //
     else if(option == 6){
         // system will request the user how many movies he wants to rent and will be shown on the screen and will be stored in the rent array and will display the total price of the rent
-        int numberOfMovies;
-        cout << "Please enter the number of movies you want to rent: ";
-        cin >> numberOfMovies;
-        cout << "\n";
-        int totalPrice = 0;
-        for(int i=0; i<numberOfMovies; i++){
-            int movieOption;
-            cout << "Please choose a movie to rent: ";
-            cin >> movieOption;
-            cout << "\n";
-            if(movieOption==1){
-                totalPrice += rents[0]->getPrice();
-                cout << "You have rented " << rents[0]->getName() << " for $ " << rents[0]->getPrice() << "\n";
-            }else if(movieOption==2){
-                totalPrice += rents[1]->getPrice();
-                cout << "You have rented " << rents[1]->getName() << " for $ " << rents[1]->getPrice() << "\n";
-            }else if(movieOption==3){
-                totalPrice += rents[2]->getPrice();
-                cout << "You have rented " << rents[2]->getName() << " for $ " << rents[2]->getPrice() << "\n";
-            }else if(movieOption==4){
-                totalPrice += rents[3]->getPrice();
-                cout << "You have rented " << rents[3]->getName() << " for $ " << rents[3]->getPrice() << "\n";
-            }else if(movieOption==5){
-                totalPrice += rents[4]->getPrice();
-                cout << "You have rented " << rents[4]->getName() << " for $ " << rents[4]->getPrice() << "\n";
-            }else{
-                cout << "Invalid option" << endl;
-                return 0;
-            }
+        int numberOfMovies; // Create an integer variable
+        cout << "Please enter the number of movies you want to rent: "; // Ask the user to enter the number of movies he wants to rent
+        cin >> numberOfMovies; // Get the number of movies from the user
+        cout << "\n"; // Print a new line
+        int totalPrice = 0; // Create an integer variable
+        for(int i=0; i<numberOfMovies; i++){ // For each movie in the rent array
+            int movieOption; // Create an integer variable
+            cout << "Please choose a movie to rent: "; // Ask the user to choose a movie
+            cin >> movieOption; // Get the movie from the user
+            cout << "\n"; // Print a new line
+            if(movieOption==1){ // If the movie is 1
+                totalPrice += rents[0]->getPrice(); // Add the price of the movie to the total price
+                cout << "You have rented " << rents[0]->getName() << " for $ " << rents[0]->getPrice() << "\n"; // Print the movie and the price
+            }else if(movieOption==2){ // If the movie is 2
+                totalPrice += rents[1]->getPrice(); // Add the price of the movie to the total price
+                cout << "You have rented " << rents[1]->getName() << " for $ " << rents[1]->getPrice() << "\n"; // Print the movie and the price
+            }else if(movieOption==3){ // If the movie is 3
+                totalPrice += rents[2]->getPrice(); // Add the price of the movie to the total price
+                cout << "You have rented " << rents[2]->getName() << " for $ " << rents[2]->getPrice() << "\n"; // Print the movie and the price
+            }else if(movieOption==4){ // If the movie is 4
+                totalPrice += rents[3]->getPrice(); // Add the price of the movie to the total price
+                cout << "You have rented " << rents[3]->getName() << " for $ " << rents[3]->getPrice() << "\n"; // Print the movie and the price
+            }else if(movieOption==5){ // If the movie is 5
+                totalPrice += rents[4]->getPrice(); // Add the price of the movie to the total price
+                cout << "You have rented " << rents[4]->getName() << " for $ " << rents[4]->getPrice() << "\n"; // Print the movie and the price
+            }else{ // If the movie is not 1, 2, 3, 4 or 5
+                cout << "Invalid option" << endl; // Print an error message
+                return 0; // Exit the program
+            } // End of if-else statement
             // here will display the total price of the rent for all the movies the user has rented
-            cout << "Total price: $ " << totalPrice << "\n";
-        }
-    }
+            cout << "Total price: $ " << totalPrice << "\n"; // Print the total price
+        } // End of for loop
+    } //   
 }
-while(option !=0);
-return 0;
-}
+while(option !=0); // End of do-while loop
+return 0; // Exit the program
+} // End of main function

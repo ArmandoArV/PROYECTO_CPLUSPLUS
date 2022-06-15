@@ -20,6 +20,11 @@ Movie::~Movie()
 }
 
 
+ostream& operator<<(ostream& output, Movie* movie){
+    output << "Pelicula";
+    output << "Movie: " << movie->getName() << "Id: " << movie->getId();
+    return output;
+}
 
 void Movie::print()
 { // prints the movie

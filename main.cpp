@@ -19,6 +19,7 @@ int option=0;
    // Vector to store movies, series and rents
     vector <Video*> movies(5);
     vector <Video*> series(5);
+    vector <Video*> seasons(10);
     // vector <series>
     // Movie objects
     
@@ -34,6 +35,8 @@ int option=0;
     series[2] = new Serie(3,"Breaking Bad","2h","Drama","5","10",4);
     series[3] = new Serie(4,"The Walking Dead","2h","Horror","5","10",3);
     series[4] = new Serie(5,"The Simpsons","2h","Animation","5","10",2);
+
+
 
     // Menu
 
@@ -91,7 +94,8 @@ do{
         cin >> movieOption; // Get the movie from the user
         cout << "\n";
         if(movieOption==1){ // If the movie is 1
-            movies[0]->print(); // Print the movie "The Matrix"
+            movies[0]->print();
+            cout << movies[0];
         }else if(movieOption==2){ // If the movie is 2
             movies[1]->print(); // Print the movie "Inception"
         }else if(movieOption==3){ // If the movie is 3

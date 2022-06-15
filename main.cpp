@@ -7,7 +7,6 @@
 #include "Video.h"
 #include "Movie.h"
 #include "Serie.h"
-#include "Rent.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -20,7 +19,6 @@ int option=0;
    // Vector to store movies, series and rents
     vector <Video*> movies(5);
     vector <Video*> series(5);
-    vector <Video*> rents(5);
     // vector <series>
     // Movie objects
     
@@ -36,12 +34,7 @@ int option=0;
     series[2] = new Serie(3,"Breaking Bad","2h","Drama","5","10",4);
     series[3] = new Serie(4,"The Walking Dead","2h","Horror","5","10",3);
     series[4] = new Serie(5,"The Simpsons","2h","Animation","5","10",2);
-    // Rent Objects
-    rents[0] = new Rent(501,3,"Joker","2h","Action",50);
-    rents[1] = new Rent(502,4,"Mad Max","2h","Action",70);
-    rents[2] = new Rent(503,5,"Coco","2h","Animation",80);
-    rents[3] = new Rent(504,2,"The Exorcist","2h","Horror",90);
-    rents[4] = new Rent(505,1,"The Lion King","2h","Animation",100);
+
     // Menu
 
 do{
@@ -61,7 +54,7 @@ do{
     cout << "   [3] Watch a serie" << "\n";
     cout << "   [4] Show movies based on rating" << "\n";
     cout << "   [5] Show series based on rating" << "\n";
-    cout << "   [6] Rent a movie" << "\n";
+    cout << "   [6] Rate a serie" << "\n";
     cout << "   [0] Exit" << "\n";
     //Operations
     cout << "\n";
@@ -158,17 +151,69 @@ do{
                 //cout << "Serie: " << series[i]->getName() << "Rating" << series[i]->getRating() << endl; // Print the serie
             } // End of if statement
         } // End of for loop
-    } //
-    else if(option == 6){
-        // system will request the user how many movies he wants to rent and will be shown on the screen and will be stored in the rent array and will display the total price of the rent
-        int numberOfMovies; // Create an integer variable
-        cout << "Please enter the number of movies you want to rent: "; // Ask the user to enter the number of movies he wants to rent
-        cin >> numberOfMovies; // Get the number of movies from the user
-        cout << "\n"; // Print a new line
-        int totalPrice = 0; // Create an integer variable
         
-    } //
+    }
+    else if(option == 6){
+        // user will rate a a serie
+        int rating; // Create an integer variable
+        int optionToRate;
 
+        cout << "[1] for rating a movie, [2] for rating a serie" << "\n";
+        cout << "Enter an option: ";
+        cin >> optionToRate;
+        cout << "\n";
+        if(optionToRate==1){
+            int movieOption;
+            cout << "Please choose a movie to rate: ";
+            cin >> movieOption;
+            cout << "\n";
+            cout << "Please enter a rating: ";
+            cin >> rating;
+            cout << "\n";
+            if(movieOption==1){
+                movies[0]->setRating(rating);
+            }
+            else if(movieOption==2){
+                movies[1]->setRating(rating);
+            }
+            else if(movieOption==3){
+                movies[2]->setRating(rating);
+            }
+            else if(movieOption==4){
+                movies[3]->setRating(rating);
+            }
+            else if(movieOption==5){
+                movies[4]->setRating(rating);
+            }
+        }
+        else if(optionToRate == 2){
+            int serieOption; // Create an integer variable
+            cout << "Please choose a serie to rate: "; // Ask the user to choose a serie
+            cin >> serieOption; // Get the serie from the user
+            cout << "\n"; // Print a new line
+            cout << "Please enter a rating: "; // Ask the user to enter a rating
+            cin >> rating; // Get the rating from the user
+            cout << "\n"; // Print a new line
+            if(serieOption==1){ // If the serie is 1
+                series[0]->setRating(rating); // Set the rating of the serie "Game of Thrones"
+            }else if(serieOption==2){ // If the serie is 2
+                series[1]->setRating(rating); // Set the rating of the serie "The Big Bang Theory"
+            }else if(serieOption==3){ // If the serie is 3
+                series[2]->setRating(rating); // Set the rating of the serie "Breaking Bad"
+            }else if(serieOption==4){ // If the serie is 4
+                series[3]->setRating(rating); // Set the rating of the serie "The Walking Dead"
+            }else if(serieOption==5){ // If the serie is 5
+                series[4]->setRating(rating); // Set the rating of the serie "The Simpsons"
+            }else{ // If the serie is not 1, 2, 3, 4 or 5
+                cout << "Invalid option" << endl; // Print an error message
+                return 0; // Exit the program
+            } // End of if-else statement
+        }
+    }
+    else if(option == 0){ // If the option is 0
+        cout << "Thank you for using the catalogue!" << endl; // Print a message
+        return 0; // Exit the program
+    } // End of if-else statement
 }
 while(option !=0); // End of do-while loop
 return 0; // Exit the program

@@ -1,3 +1,9 @@
+/*
+    Name: Armando Arredondo Valle
+    Date: 12/06/2022
+    Matricula: A01424709
+*/
+
 #include <iostream>
 #include "Serie.h"
 #include "Video.h"
@@ -40,4 +46,11 @@ void Serie::setEpisodes(string episodes)
 void Serie::print()
 {
     cout << "Serie: " << getName() << "\n" << " Id: " << getId() << "\n" << " Length: " << getLength() << "\n" << " Genre: " << getGenre() << "\n" << " Seasons: " << getSeasons() << "\n" << " Episodes: " << getEpisodes() << "\n" << " Rating: " << getRating() << "\n";
+}
+
+// Overloading the operator << to print the information of the object
+ostream& operator << (ostream& out, Serie& serie)
+{
+    out << "Serie: " << serie.getName() << " " << serie.getLength() << " " << serie.getGenre() << " " << serie.getSeasons() << " " << serie.getEpisodes() << " " << serie.getRating() << endl;
+    return out;
 }

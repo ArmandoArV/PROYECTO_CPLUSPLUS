@@ -1,3 +1,9 @@
+/*
+    Name: Armando Arredondo Valle
+    Date: 12/06/2022
+    Matricula: A01424709
+*/
+
 #include <iostream>
 #include "Video.h"
 
@@ -20,33 +26,32 @@ Video::~Video()
 
 int Video::getId()
 {
-    return this->id;
+    return id;
 }
 
 string Video::getLength()
 {
-    return this->length;
+    return length;
 }
 
 string Video::getGenre()
 {
-    return this->genre;
+    return genre;
 }
 
 string Video::getName()
 {
-    return this->name;
-    cout << name;
+    return name;
 }
 
 int Video::getPrice()
 {
-    return this->price;
+    return price;
 }
 
 int Video::getRating()
 {
-    return this->rating;
+    return rating;
 }
 
 void Video::setId(int id)
@@ -76,13 +81,12 @@ void Video::setRating(int rating)
 }
 
 
-
 void Video::print()
 {
     cout << "Movie rating list: " << endl;
-    cout << "Id: " << this->id << endl;
-    cout << "Name: " << this->name << endl;
-    cout << "Length: " << this->length << endl;
-    cout << "Genre: " << this->genre << endl;
+    cout << "Id: " << getId() << endl;
+    cout << "Name: " << getName() << endl;
+    cout << "Length: " << getLength() << endl;
+    cout << "Genre: " << getGenre() << endl;
 
 }

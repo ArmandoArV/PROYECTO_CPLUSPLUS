@@ -10,6 +10,6 @@ public:
     Movie();
     Movie(int id, string name ,string length, string genre, int rating);
     ~Movie();
-
+    friend ostream& operator<<(ostream& , Movie );
     void print();
 };

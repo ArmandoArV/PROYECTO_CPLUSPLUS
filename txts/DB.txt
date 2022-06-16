@@ -11,12 +11,5 @@
 [4] The Walking Dead
 [5] The Simpsons  
 
-                        Rental
-
-[1] Joker
-[2] Mad Max
-[3] Coco
-[4] The Exorcist
-[5] The Lion King
 
 

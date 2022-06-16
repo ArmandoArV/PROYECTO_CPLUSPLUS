@@ -38,7 +38,7 @@ int option=0;
 
     movies[0] = new Movie(1, "The Matrix", "2h", "Sci-Fi", 3); // Movie object 1
     movies[1] = new Movie(2, "Inception", "2h", "Action", 4);
-    movies[2] = new Movie(3, "The Dark Knight", "2h", "Action", 5);
+    movies[2] = new Movie(3, "The Dark Knight", "2h", "Action", 1);
     movies[3] = new Movie(4, "Interestellar", "2h", "Sci-Fi", 2);
     movies[4] = new Movie(5, "Minions", "2h", "Animation", 5);
 
@@ -377,6 +377,7 @@ do{
         system("CLS"); // Clear the screen
     } // 
     else if(option == 4){ // If the option is 4
+        system("CLS"); // Clear the screen
         int rating; // Create an integer variable
         cout << "Please enter a rating: "; // Ask the user to enter a rating
         cin >> rating; // Get the rating from the user
@@ -389,9 +390,11 @@ do{
                 movies[i]->print(); // Print the movie
             } // End of if statement
         } // End of for loop
+        wait(); // Wait for the user to press a key
     } //
     else if(option == 5){ // If the option is 5
         int rt; // Create an integer variable
+        system("CLS"); // Clear the screen
         cout << "Please enter a rating: "; // Ask the user to enter a rating
         cin >> rt; // Get the rating from the user
         cout << "\n"; // Print a new line
@@ -402,7 +405,7 @@ do{
                 //cout << "Serie: " << series[i]->getName() << "Rating" << series[i]->getRating() << endl; // Print the serie
             } // End of if statement
         } // End of for loop
-        
+        wait(); // Wait for the user to press a key
     }
     else if(option == 6){
         // user will rate a a serie

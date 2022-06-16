@@ -74,3 +74,30 @@ Se está haciendo uso de la sobrecarga para mostrar el usuario en pantalla, esto
     return os;
     }
 ```
+
+---
+
+## **Casos de prueba**
+
+1) Caso A:  
+   Mostrar el catálogo de películas y series.
+
+```c++
+
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |" "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+    ```

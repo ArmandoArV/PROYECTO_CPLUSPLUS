@@ -484,6 +484,7 @@ do{
         cout << "Thank you for using the catalogue!" << endl; // Print a message
         return 0; // Exit the program
     } // End of if-else statement
+    
 }
 while(option !=0); // End of do-while loop
 return 0; // Exit the program

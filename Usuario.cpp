@@ -1,3 +1,8 @@
+/*
+    Name: Armando Arredondo Valle
+    Date: 12/06/2022
+    Matricula: A01424709
+*/
 #include <iostream>
 #include "Usuario.h"
 

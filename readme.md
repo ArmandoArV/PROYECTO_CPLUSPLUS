@@ -45,3 +45,32 @@ class Video{
         virtual void print(); // Aquí tenemos de forma virtual en el .h de video, al nosotros realizar la parte de la herencia en otros archivos podemos utilizar este método de forma personalizada según se adecue a nuestras necesidades.
 };
 ```
+
+---
+
+## **Sobrecarga**
+
+---
+
+### **Uso de la sobrecarga:**
+
+Se está haciendo uso de la sobrecarga para mostrar el usuario en pantalla, esto ya que en cualquier servicio de streaming es necesario que se despliegue el mismo para poder tener presente quién está viendo qué.
+
+**.h  donde se inicializa la sobrecarga.**
+
+```c++
+    // Con esto determinamos la  sobrecarga para imprimir los datos del usuario.
+    friend ostream& operator<<(ostream& os, const Usuario& u);
+
+```
+
+**.cpp donde se inicializa la sobrecarga.**
+
+```c++
+    // Aquí sobrecargamos la impresión del usuario y el status de su cuenta
+    ostream &operator<<(ostream &os, const Usuario &u)
+    {
+    os << "Usuario: " << u.user << "\n" << " Status: " << u.status << "\n";
+    return os;
+    }
+```

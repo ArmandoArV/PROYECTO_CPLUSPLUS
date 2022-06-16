@@ -2,6 +2,8 @@
     Name: Armando Arredondo Valle
     Date: 12/06/2022
     Matricula: A01424709
+    Finalizado:
+    15/06/2022 - Completo el programa 11:50pm
 */
 // Here we include the libraries we need
 #include "Video.h"

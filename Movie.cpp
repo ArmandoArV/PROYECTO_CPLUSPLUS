@@ -28,5 +28,5 @@ ostream& operator<<(ostream& output, Movie* movie){
 
 void Movie::print()
 { // prints the movie
-    cout << "Movie: " << getName() << "\n" <<" Id: " << getId() << "\n" << " Length " << getLength() << "\n" << " Genre: " << getLength() << "\n" << " Rating: " << getRating() << "\n";
+    cout << "Movie: " << getName() << "\n" <<" Id: " << getId() << "\n" << " Length " << getLength() << "\n" << " Genre: " << getGenre() << "\n" << " Rating: " << getRating() << "\n";
 }

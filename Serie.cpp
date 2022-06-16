@@ -5,6 +5,7 @@
 */
 
 #include <iostream>
+#include <vector>
 #include "Serie.h"
 #include "Video.h"
 using namespace std;
@@ -45,7 +46,7 @@ void Serie::setEpisodes(string episodes)
 
 void Serie::print()
 {
-    cout << "Serie: " << getName() << "\n" << " Id: " << getId() << "\n" << " Length: " << getLength() << "\n" << " Genre: " << getGenre() << "\n" << " Seasons: " << getSeasons() << "\n" << " Episodes: " << getEpisodes() << "\n" << " Rating: " << getRating() << "\n";
+    cout << "Serie: " << getName() << "\n" << " Id: " << getId() << "\n" << " Seasons: " << getLength() << "\n" << " Genre: " << getGenre() << "\n" << " Rating: " << getRating() << "\n";
 }
 
 // Overloading the operator << to print the information of the object

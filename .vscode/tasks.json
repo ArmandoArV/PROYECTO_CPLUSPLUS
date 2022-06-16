@@ -14,6 +14,8 @@
                 "Video.cpp",
                 "Movie.cpp",
                 "Serie.cpp",
+                "Episodes.cpp",
+                "Usuario.cpp",
 
             ],
             "group": {

@@ -12,7 +12,6 @@ class Video //
 private:
     string name;
     int id;
-    int price;
     int rating;
     string length;
     string genre;
@@ -22,7 +21,6 @@ public:
     ~Video();
     int getId();
     int getRating();
-    int getPrice();
     //Getters
     string getName();
     string getLength();
@@ -35,6 +33,6 @@ public:
     void setLength(string length);
     void setGenre(string genre);
     void setRating(int rating);
-    void setPrice(int price);
+
     virtual void print(); // prints the information of the video (overrided in the derived classes) (virtual function) (pure virtual function)
 };

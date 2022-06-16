@@ -44,10 +44,6 @@ string Video::getName()
     return name;
 }
 
-int Video::getPrice()
-{
-    return price;
-}
 
 int Video::getRating()
 {
@@ -90,3 +86,4 @@ void Video::print()
     cout << "Genre: " << getGenre() << endl;
 
 }
+

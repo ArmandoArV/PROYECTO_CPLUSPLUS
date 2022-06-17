@@ -9,6 +9,7 @@ Este programa simula un servicio de streaming el cual posee 4 clases, en las cua
 ---
 
 ## **Diagrama UML**
+
 ![Diagrama de Clases](A01424709_UML.png "Diagrama de Clases")
 
 ---
@@ -136,6 +137,8 @@ Se está haciendo uso de la sobrecarga para mostrar el usuario en pantalla, esto
 Please wait while we return to the menu...
 ```
 
+---
+
 1) Caso B:  
    Ver una película.
 
@@ -200,6 +203,7 @@ Movie: The Matrix
  Rating: 3
 Please wait while we return to the menu...
 ```
+---
 
 3) Caso C:  
    Ver una serie.
@@ -317,4 +321,134 @@ Length: 1h
 Rating: 1
 
 Please wait while we return to the menu...
+```
+
+---
+
+4) **Caso D:**  
+   Ver películas basadas en un rating.
+
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+```
+
+**Input:**
+
+```c++
+    4
+```
+
+**Output:**
+
+```txt
+Please enter a rating: 2
+```
+
+**Output:**
+
+```txt
+Movie: Interestellar
+ Id: 4
+ Length 2h
+ Genre: Sci-Fi
+ Rating: 2
+Please wait while we return to the menu...
+```
+
+---
+
+5) **Caso E:**  
+   Ver una serie basada en el rating.
+
+**Output:**
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+```
+
+**Input:**
+
+```c++
+    5
+```
+**Output:**
+
+```txt
+Please enter a rating: 1
+```
+
+**Output:**
+
+```txt
+Serie: Game of Thrones
+ Id: 1
+ Seasons: 1 season
+ Genre: Fantasy
+ Rating: 1
+Please wait while we return to the menu...
+```
+---
+
+6) **Caso F:**  
+   Cambiar calificación de una serie o película.
+
+**Output:**
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
 ```

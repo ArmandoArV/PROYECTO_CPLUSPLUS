@@ -8,6 +8,11 @@ Este programa simula un servicio de streaming el cual posee 4 clases, en las cua
 
 ---
 
+## **Diagrama UML**
+![Diagrama de Clases](A01424709_UML.png "Diagrama de Clases")
+
+---
+
 ## **Puntos a cubrir**
 
 ---
@@ -83,10 +88,12 @@ Se está haciendo uso de la sobrecarga para mostrar el usuario en pantalla, esto
    Mostrar el catálogo de películas y series.
 
 ```c++
-
+    Usuario: Armando
+     Status: Premium
     "-------------------------------------------"
     "|                                         |"
-    "|                                         |" "|                                         |"
+    "|                                         |"
+    "|                                         |"
     "|       Welcome to the Video Library!     |"
     "|                                         |"
     "|                                         |"
@@ -100,4 +107,214 @@ Se está haciendo uso de la sobrecarga para mostrar el usuario en pantalla, esto
     "   [6] Rate a movie or a serie"
     "   [0] Exit"
     "Please enter an option: "
-    ```
+
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+                        Movies
+[1] The Matrix
+[2] Inception
+[3] The Darknight
+[4] Interestellar
+[5] Minions
+                        Series
+[1] Game Of Thrones
+[2] The BigBang Theory 
+[3] Breaking Bad
+[4] The Walking Dead
+[5] The Simpsons  
+
+
+Please wait while we return to the menu...
+```
+
+1) Caso B:  
+   Ver una película.
+
+**Output:**
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+
+```
+
+**Input:**
+
+```c++
+    2
+```
+
+**Output:**
+
+```txt
+                        Movies
+[1] The Matrix
+[2] Inception
+[3] The Darknight
+[4] Interestellar
+[5] Minions
+
+
+Please choose a movie to watch: 
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+Movie: The Matrix
+ Id: 1
+ Length 2h
+ Genre: Sci-Fi
+ Rating: 3
+Please wait while we return to the menu...
+```
+
+3) Caso C:  
+   Ver una serie.
+
+**Output:**
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+
+```
+
+**Input:**
+
+```c++
+    3
+```
+
+**Output:**
+
+```txt
+                        Series
+[1] Game Of Thrones
+[2] The BigBang Theory
+[3] Breaking Bad
+[4] The Walking Dead
+[5] The Simpsons
+
+
+Please choose a serie to watch:
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+                        Series
+[1] Game Of Thrones
+[2] The BigBang Theory
+[3] Breaking Bad
+[4] The Walking Dead
+[5] The Simpsons
+
+
+Please choose a serie to watch: 1
+
+Serie: Game of Thrones
+ Id: 1
+ Seasons: 1 season
+ Genre: Fantasy
+ Rating: 1
+Please choose a season:
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+List of episodes:
+
+ Id: 1
+Name:The tomb of the Dragon
+Length: 1h
+Rating: 1
+
+
+ Id: 2
+Name:The last of the Night King
+Length: 1h
+Rating: 4
+
+
+Please choose an episode:
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+ Id: 1
+Name:The tomb of the Dragon
+Length: 1h
+Rating: 1
+
+Please wait while we return to the menu...
+```

@@ -23,6 +23,11 @@
         "typeinfo": "cpp",
         "sstream": "cpp",
         "fstream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "string_view": "cpp",
+        "string": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "system_error": "cpp"
     }
 }

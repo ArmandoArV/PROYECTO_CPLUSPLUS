@@ -17,6 +17,8 @@
 #include <vector>
 #include <string>
 #include<windows.h>
+#include <limits>
+
 using namespace std;
 
 int wt = 5000;
@@ -28,8 +30,8 @@ void wait(){
 
 
 int main(){
-int option=0;
-
+    int option=0;
+    
 
    // Vector to store movies, series and seasons
     vector <Video*> movies(5);
@@ -99,6 +101,12 @@ do{
     cout << "\n";
     cout << "Please enter an option: ";  // Ask the user to enter an option
     cin >> option; // Get the option from the user
+    /*
+    while(!(cin >> option || option!=0)){
+        cout << "Please enter a valid option: ";
+        cin.clear();
+        cin.ignore(123, '\n');
+    }*/
     cout << "\n"; // Print a new line
     if(option == 1){ // If the option is 1
         system("CLS"); // Clear the screen
@@ -484,8 +492,73 @@ do{
         cout << "Thank you for using the catalogue!" << endl; // Print a message
         return 0; // Exit the program
     } // End of if-else statement
-    
 }
+
+
 while(option !=0); // End of do-while loop
+// while option is an integer between 0 and 6, the program will continue to run if not, the program will return to the main menu
+
+/* Se suponia esto debia validar si no era una letra
+while(!(cin >> option)){
+        cout << "Please enter a valid option: ";
+        cin.clear();
+        cin.ignore(123, '\n');
+};
+*/
+
+try {
+    if(option < 0 || option > 6){
+        throw "Invalid option";
+    }
+}
+catch(const char* msg){
+    cout << msg << endl;
+}
+
+
+
+try { if(!(cin >> option)){
+        throw "Invalid option";
+    }
+}
+catch(const char* msg){
+    cout << msg << endl;
+}
+
+try {
+    if(option == 1){
+        if(movies.size() == 0){
+            throw "There are no movies in the catalogue";
+        }
+    }
+}
+catch(const char* msg){
+    cout << msg << endl;
+}
+
+try {
+    if(option == 2){
+        if(series.size() == 0){
+            throw "There are no series in the catalogue";
+        }
+    }
+}
+catch(const char* msg){
+    cout << msg << endl;
+}
+
+try {
+    if(option == 3){
+        if(movies.size() == 0){
+            throw "There are no movies in the catalogue";
+        }
+    }
+}
+catch(const char* msg){
+    cout << msg << endl;
+}
+
+
 return 0; // Exit the program
 } // End of main function
+

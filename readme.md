@@ -1,10 +1,25 @@
 # Proyecto servicio de streaming
 
-## Por: Armando Arredondo Valle
+### Por: Armando Arredondo Valle [A01424709]
 
-## Descripción del proyecto
+---
+## Table of Contents
+
+1. Descripción del proyecto
+2. Diagrama UML
+3. Rúbrica del proyecto
+4. Uso de cada propiedad
+5. Casos de prueba
+6. Conclusión
+7. Referencias
+
+---
+
+## Descripción del proyecto y defensa
 
 Este programa simula un servicio de streaming el cual posee 4 clases, en las cuales se aloja la clase padre (Video), la cual aloja los  atributos de nombre, id, género, duración, así como la calificación.
+
+El diseño de las clases tiene el objetivo de ser el más óptimo, con el fin de que se tuviera una fácil comprensión por parte del usuario. En el que se hacía uso de la herencia así como el polimorfismo de forma constante para tener un mejor uso de la impresión. Reduciendo así el uso de recursos entre las clases enfocandose en una misma.
 
 ---
 
@@ -23,6 +38,12 @@ Este programa simula un servicio de streaming el cual posee 4 clases, en las cua
 | Herencia | - Padre (Video) - Hijos(Movie,Serie,Episodes) | Tenemos como clase padre Video, la cual está heredando los atributos así como una función virtual para impresión a las demás clases, esto con el fin de que se cumpla el concepto básico de herencia.|
 | Polimorfismo | main | Se hace uso de los punteros en la parte del main con el fin de que se cumpla el polimorfismo, para el llamado a los métodos. |
 |Sobrecarga|main , Usuario.cpp/h | Se hace uso de la sobrecarga para imprimir el nombre de usuario de quien esté utilizando el servicio de streaming.
+---
+
+## **Argumentación del proyecto:**
+
+Se optó por utilizar métodos sencillos para la realización de este programa con el fin de que fuera lo más amigable con el usuario. En caso de que fuera seleccionada una opción inválida sería regresado al menú principal, esto con el fin de que el mismo programa no se rompiera con un error mínimo de dedo.
+
 ---
 
 ## Uso de la herencia
@@ -590,3 +611,19 @@ Movie: Interestellar
  Rating: 2
 Please wait while we return to the menu...
 ```
+
+---
+
+## Conclusión
+
+Como conclusión es que el uso de las distintas propiedades de la POO ayudan a tener una mejor eficiencia en lo que respecta a la ejecución del código así como a sus posibles atributos a usar.
+
+---
+
+## Referencias
+
+https://stackoverflow.com/questions/4798936/numeric-limits-was-not-declared-in-this-scope-no-matching-function-for-call-t
+
+https://stackoverflow.com/questions/17278183/how-do-i-output-an-error-message-for-a-non-numeric-input
+
+https://docs.microsoft.com/en-us/cpp/cpp/if-else-statement-cpp?view=msvc-170

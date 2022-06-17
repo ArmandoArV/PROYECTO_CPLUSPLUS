@@ -408,6 +408,7 @@ Please wait while we return to the menu...
 ```c++
     5
 ```
+
 **Output:**
 
 ```txt
@@ -424,6 +425,7 @@ Serie: Game of Thrones
  Rating: 1
 Please wait while we return to the menu...
 ```
+
 ---
 
 6) **Caso F:**  
@@ -451,4 +453,140 @@ Please wait while we return to the menu...
     "   [6] Rate a movie or a serie"
     "   [0] Exit"
     "Please enter an option: "
+```
+
+**Input:**
+
+```c++
+    6
+```
+
+**Output:**
+
+```txt
+    Usuario: Armando
+ Status: Premium
+
+
+-------------------------------------------
+|                                         |
+|                                         |
+|                                         |
+|       Welcome to the Video Library!     |
+|                                         |
+|                                         |
+-------------------------------------------
+Please select one of the following options:
+   [1] View all the catalogue
+   [2] Watch a movie
+   [3] Watch a serie
+   [4] Show movies based on rating
+   [5] Show series based on rating
+   [6] Rate a movie or a serie
+   [0] Exit
+
+Please enter an option: 6
+
+[1] for rating a movie, [2] for rating a serie
+Enter an option:
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+
+ These are all the movies and series which are available on the platform:
+
+                        Movies
+[1] The Matrix
+[2] Inception
+[3] The Darknight
+[4] Interestellar
+[5] Minions
+
+
+
+Please choose a movie to rate:
+```
+
+**Input:**
+
+```c++
+    1
+```
+
+**Output:**
+
+```txt
+    Please enter a rating:
+```
+
+**Input:**
+
+```c++
+    2
+```
+
+**Output:**
+
+```c++
+    Usuario: Armando
+     Status: Premium
+    "-------------------------------------------"
+    "|                                         |"
+    "|                                         |"
+    "|                                         |"
+    "|       Welcome to the Video Library!     |"
+    "|                                         |"
+    "|                                         |"
+    "-------------------------------------------"
+    "Please select one of the following options:"
+    "   [1] View all the catalogue"
+    "   [2] Watch a movie"
+    "   [3] Watch a serie"
+    "   [4] Show movies based on rating"
+    "   [5] Show series based on rating"
+    "   [6] Rate a movie or a serie"
+    "   [0] Exit"
+    "Please enter an option: "
+```
+
+**Input:**
+
+```c++
+    4
+```
+
+**Output:**
+
+```txt
+    Please enter a rating:
+```
+
+**Input:**
+
+```c++
+    2
+```
+
+**Output:**
+
+```txt
+Movie: The Matrix
+ Id: 1
+ Length 2h
+ Genre: Sci-Fi
+ Rating: 2
+Movie: Interestellar
+ Id: 4
+ Length 2h
+ Genre: Sci-Fi
+ Rating: 2
+Please wait while we return to the menu...
 ```
